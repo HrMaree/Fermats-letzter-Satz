@@ -128,10 +128,29 @@ img.portrait {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.intro-description {
-  max-width: 1000px;
-  margin: 2rem auto 0 auto;
+/* Container für Bild + Text oben + Beschreibung unten */
+.beschreibung {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Beschreibungstext unter dem Bild */
+.beschreibung p.intro {
+  margin-top: 2rem;
+  text-align: left;
+}
+.main-container.beschreibung {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.main-container.beschreibung p {
+  text-align: left;
+  margin-top: 2rem;
 }
 
 /* Footer */
