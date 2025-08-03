@@ -92,3 +92,8 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+nav svg {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
