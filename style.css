@@ -140,3 +140,7 @@ nav svg {
   margin: 0;
   padding: 0;
 }
+img.portrait {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
