@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeitleiste – Fermat-Projekt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("nav-placeholder").innerHTML = html);
+  </script>
+
+  <main>
+    <h1>Gedanken und Eindrücke</h1>
+    <p class="placeholder">Hier wird später eine Dokmentation der Gedanken und Eindrücke erscheinen, die wir beim Lesen der einzelnen Kapitel hatten.</p>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("footer-placeholder").innerHTML = html);
+  </script>
+</body>
+</html>
