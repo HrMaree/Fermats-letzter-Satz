@@ -104,12 +104,13 @@ nav svg {
 .text-section {
   flex: 1;
   min-width: 300px;
+  text-align: left;
 }
 
 .image-section {
   flex: 1;
   min-width: 300px;
-  text-align: center;
+  text-align: right;
 }
 
 .image-section img {
