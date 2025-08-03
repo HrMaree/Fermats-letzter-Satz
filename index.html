@@ -7,15 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
-  <body>
+<body>
   <div id="nav-placeholder"></div>
-<script>
-  fetch("nav.html")
-    .then(res => res.text())
-    .then(html => document.getElementById("nav-placeholder").innerHTML = html);
-</script>
-
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("nav-placeholder").innerHTML = html);
+  </script>
 
   <main>
     <div class="intro-row">
@@ -36,11 +34,10 @@
   </main>
 
   <div id="footer-placeholder"></div>
-<script>
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(html => document.getElementById("footer-placeholder").innerHTML = html);
-</script>
-
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("footer-placeholder").innerHTML = html);
+  </script>
 </body>
 </html>
