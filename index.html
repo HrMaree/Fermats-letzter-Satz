@@ -89,6 +89,36 @@
     footer a:hover {
       text-decoration: underline;
     }
+    .intro-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.text-section {
+  flex: 1 1 50%;
+  text-align: left;
+}
+
+.image-section {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.image-credit {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
   </style>
 </head>
 <body>
@@ -104,14 +134,24 @@
   </header>
 
   <main>
-    <h1>Willkommen beim Projekt "Fermats letzter Satz"</h1>
-    <p class="intro">
-      Diese Seite begleitet die Lektüre des Buches von Simon Singh im Mathematik-Leistungskurs. Hier entstehen im Laufe des Schuljahres Inhalte zu historischen Personen, mathematischen Begriffen, Sätzen und Gedanken.
-    </p>
-    <div class="image-placeholder">
-      (Hier kann ein Bild von Fermat oder eine Illustration eingefügt werden)
+  <div class="intro-row">
+    <div class="text-section">
+      <h1>Willkommen beim Projekt „Fermats letzter Satz“</h1>
     </div>
-  </main>
+    <div class="image-section">
+      <img src="fermat.jpg" alt="Porträt von Pierre de Fermat">
+     <p class="image-credit">
+        Bild: <a href="https://commons.wikimedia.org/wiki/File:Pierre_de_Fermat.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, gemeinfrei
+    </p>
+
+    </div>
+  </div>
+
+  <p class="intro">
+    Diese Seite begleitet die Lektüre des Buches von Simon Singh im Mathematik-Leistungskurs. Hier entstehen im Laufe des Schuljahres Inhalte zu historischen Personen, mathematischen Begriffen, Sätzen und Gedanken.
+  </p>
+</main>
+
 
   <footer>
     <a href="#">Impressum</a>
