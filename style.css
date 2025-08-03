@@ -14,8 +14,21 @@ main {
 
 /* Navigationsleiste */
 nav {
-  background-color: #f5f5f5; /* Grauer Streifen über gesamte Breite */
-  padding: 0.8rem 0;
+  background-color: #f8f8f8; /* bleibt erhalten */
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd; /* dünner Trennstreifen */
+  margin-bottom: 2rem; /* Abstand zum folgenden Inhalt */
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+  padding: 0 1rem;
 }
 
 nav ul {
