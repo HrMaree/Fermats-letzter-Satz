@@ -104,13 +104,13 @@ nav svg {
 .text-section {
   flex: 1;
   min-width: 300px;
-  text-align: left;
+  text-align: center;
 }
 
 .image-section {
   flex: 1;
   min-width: 300px;
-  text-align: right;
+  text-align: center;
 }
 
 .image-section img {
@@ -131,7 +131,7 @@ img.portrait {
 
 /* Container für Bild + Text oben + Beschreibung unten */
 .beschreibung {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
