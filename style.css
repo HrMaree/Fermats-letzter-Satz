@@ -1,110 +1,59 @@
-/* Grundlayout */
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  color: #000;
-}
+/* Navigation */
 
-/* Zentrierter Inhaltsbereich */
-main {
-  max-width: 1000px;
-  margin: 60px auto 40px;
-  padding: 0 20px;
-}
-
-/* Navigationsleiste */
 nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px 0;
   background-color: #f8f8f8;
+  padding: 16px 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-nav .nav-container {
+.nav-inner {
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 40px; /* Abstand zwischen Home und Linkmenü */
+  padding: 0 16px;
 }
 
-/* Home-Symbol */
-nav .home-link {
+.home-link {
   display: flex;
   align-items: center;
-  margin-right: 20px;
 }
 
-nav .home-link svg {
-  width: 20px;
-  height: 20px;
+.home-icon {
+  width: 24px;
+  height: 24px;
   fill: #333;
   transition: fill 0.2s;
 }
 
-nav .home-link:hover svg {
+.home-link:hover .home-icon {
   fill: #666;
 }
 
-/* Navigationslinks */
-nav a {
+.nav-links {
+  display: flex;
+  gap: 40px; /* Abstand zwischen den einzelnen Links */
+}
+
+.nav-links a {
   text-decoration: none;
   color: #000;
   font-weight: 600;
   transition: color 0.3s;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: #666;
 }
 
-/* Introbereich */
-.intro-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
+/* Inhalt */
 
-.text-section {
-  flex: 1 1 400px;
-}
-
-.image-section {
-  flex: 0 0 auto;
-  text-align: center;
-}
-
-.image-section img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-.image-credit {
-  font-size: 0.8em;
-  color: #666;
-}
-
-.intro {
-  margin-top: 2em;
-  font-size: 1.1em;
-  line-height: 1.6;
-  text-align: center;
-}
-
-/* Footer */
-footer {
-  background-color: #f8f8f8;
-  padding: 12px 20px;
-  font-size: 0.9em;
-  text-align: right;
-  color: #999;
-  border-top: 1px solid #ddd;
+main, .content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 16px;
 }
