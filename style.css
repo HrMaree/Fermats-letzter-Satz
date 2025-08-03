@@ -142,15 +142,16 @@ img.portrait {
   text-align: left;
 }
 .main-container.beschreibung {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .main-container.beschreibung p {
-  text-align: left;
-  margin-top: 2rem;
+  text-align: center;
+  margin-top: 3rem;
 }
 
 /* Footer */
