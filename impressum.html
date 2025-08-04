@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("nav-placeholder").innerHTML = html);
+  </script>
+
+  <main class="main-container">
+    <h1>Impressum</h1>
+
+    <section class="impressum-section">
+      <h2>Angaben gemäß § 5 TMG / § 18 Abs. 2 MStV</h2>
+      <p><strong>Verantwortlich für diese Webseite:</strong><br>
+      Samuel Marée<br>
+      Gymnasium Nord<br>
+      Muckermannstr. 1<br>
+      06488 Frankfurt am Main<br>
+      samuel.maree@schule.hessen.de</p>
+
+      <h2>Projektbeschreibung</h2>
+      <p>Diese Webseite ist ein schulisches Projekt im Rahmen des Mathematik-Leistungskurses 2025/26 am Gymnasium [Name].
+      Ziel ist es, begleitend zur Lektüre des Buches <em>Fermats letzter Satz</em> von Simon Singh mathematische Inhalte,
+      Gedanken und Recherchen der Schüler*innen zu dokumentieren.</p>
+
+      <h2>Urheberrecht</h2>
+      <p>Alle auf dieser Webseite veröffentlichten Inhalte (Texte, Bilder, Grafiken) unterliegen dem deutschen Urheberrecht.
+      Soweit nicht anders angegeben, liegen die Rechte bei den jeweiligen Autor*innen oder sind entsprechend lizenziert (z. B. Creative Commons).
+      Eine Vervielfältigung, Bearbeitung oder Weiterverbreitung ist nur mit ausdrücklicher Genehmigung gestattet.</p>
+
+      <h2>Haftung für Inhalte</h2>
+      <p>Diese Webseite wird mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen.</p>
+
+      <h2>Haftung für externe Links</h2>
+      <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.
+      Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+
+      <h2>Logo und Verlinkung</h2>
+      <p><img src="logo-gymnasium.png" alt="Logo des Gymnasiums [Name]" style="height: 50px; vertical-align: middle;"> <br>
+      Besuchen Sie die Homepage des Gymnasiums [Name]: <a href="https://www.deine-schule.de" target="_blank">www.deine-schule.de</a></p>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => document.getElementById("footer-placeholder").innerHTML = html);
+  </script>
+</body>
+</html>
