@@ -184,6 +184,11 @@ img.portrait {
   width: 70%;
 }
 
+#sheet-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 /* Spaltenüberschriften fett + Abstand */
 #sheet-content th {
   font-weight: bold;
