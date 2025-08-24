@@ -229,13 +229,12 @@ footer a:hover {
 
 @media (max-width: 768px) {
   .menu-icon {
-    display: block;
+    margin-left: auto;
+    padding: 0.5rem;
     font-size: 2rem;
     cursor: pointer;
-    padding: 0.5rem;
-    position: absolute;
-    right: 1rem;
   }
+
 
   #menu-toggle {
     display: none;
