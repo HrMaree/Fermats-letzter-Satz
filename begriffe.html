@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zeitleiste – Fermat-Projekt</title>
+  <title>Begriffe – Fermat-Projekt</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="style.css">
 
@@ -27,64 +27,12 @@
       .then(res => res.text())
       .then(html => document.getElementById("footer-placeholder").innerHTML = html);
   </script>
-  
-  <!-- Google Visualization API laden -->
+
 <script src="https://www.gstatic.com/charts/loader.js"></script>
-
-<!-- Dein individuelles Script -->
+<script src="loadSheet.js"></script>
 <script>
-  // Schritt 1: Tab (Reiter) benennen – hier z.B. "begriffe"
-  const tabName = 'Begriffe'; // <-- Passe das für jede Seite an!
-
-  // Schritt 2: Vollständiger Fetch-Link mit deinem Sheet
-  const sheetUrl = `https://docs.google.com/spreadsheets/d/1H_5DD-T3VIRRcPMohU5dr8rKnQj8U1mOakuW1AKpBuw/gviz/tq?sheet=${tabName}`;
-                                            // Original gid-Link der Tabelle: https://docs.google.com/spreadsheets/d/1H_5DD-T3VIRRcPMohU5dr8rKnQj8U1mOakuW1AKpBuw/edit?gid=20555046#gid=20555046
-  // Schritt 3: Daten laden und anzeigen
-  function init() {
-    const query = new google.visualization.Query(sheetUrl);
-    query.send(handleQueryResponse);
-  }
-
-  function handleQueryResponse(response) {
-  if (response.isError()) {
-    document.getElementById("sheet-content").innerText = 'Fehler beim Laden der Tabelle.';
-    return;
-  }
-
-  const data = response.getDataTable();
-  const numRows = data.getNumberOfRows();
-  const numCols = data.getNumberOfColumns();
-
-  // Erste Zelle als Titel entnehmen
-  const title = data.getValue(0, 0);
-  document.getElementById("sheet-title").innerHTML = `<h2>${title}</h2>`;
-
-  // Tabelle beginnt ab zweiter Zeile (i = 1)
-  let html = '<table>';
-
-  // Tabellenüberschriften (aus Zeile 1)
-  html += '<tr>';
-  for (let j = 0; j < numCols; j++) {
-    html += `<th>${data.getValue(1, j) || ''}</th>`;
-  }
-  html += '</tr>';
-
-  // Tabelleninhalt
-  for (let i = 2; i < numRows; i++) {
-    html += '<tr>';
-    for (let j = 0; j < numCols; j++) {
-      html += `<td>${data.getValue(i, j) || ''}</td>`;
-    }
-    html += '</tr>';
-  }
-
-  html += '</table>';
-  document.getElementById("sheet-content").innerHTML = html;
-}
-
-
-  google.charts.load('current', { packages: ['corechart'] });
-  google.charts.setOnLoadCallback(init);
+  loadSheet('Begriffe'); // oder 'Kapitel', 'Zeitleiste' usw.
 </script>
+  
 </body>
 </html>
