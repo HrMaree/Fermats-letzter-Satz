@@ -18,6 +18,7 @@
 
   <main>
     <h1>Begriffe</h1>
+    <div id="sheet-content">Lade Inhalte...</div>
     <p class="placeholder">Hier wird später eine Übersicht der wichtigsten mathematischen Begriffe erscheinen.</p>
   </main>
 
@@ -27,5 +28,49 @@
       .then(res => res.text())
       .then(html => document.getElementById("footer-placeholder").innerHTML = html);
   </script>
+  
+  <!-- Google Visualization API laden -->
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+
+<!-- Dein individuelles Script -->
+<script>
+  // Schritt 1: Tab (Reiter) benennen – hier z.B. "begriffe"
+  const tabName = 'Begriffe'; // <-- Passe das für jede Seite an!
+
+  // Schritt 2: Vollständiger Fetch-Link mit deinem Sheet
+  const sheetUrl = `https://docs.google.com/spreadsheets/d/e/2PACX-1vRK-6OU5PuL_-FGaTQ7v9Z87Tpg3nWGkTHDDvxJbfByOP2IsQr9nuF1IvETffID4cejzSwEEzwF9rwm/gviz/tq?sheet=${tabName}`;
+
+  // Schritt 3: Daten laden und anzeigen
+  function init() {
+    const query = new google.visualization.Query(sheetUrl);
+    query.send(handleQueryResponse);
+  }
+
+  function handleQueryResponse(response) {
+    if (response.isError()) {
+      document.getElementById("sheet-content").innerText = 'Fehler beim Laden der Tabelle.';
+      return;
+    }
+
+    const data = response.getDataTable();
+    const numRows = data.getNumberOfRows();
+    const numCols = data.getNumberOfColumns();
+
+    let html = '<table>';
+    for (let i = 0; i < numRows; i++) {
+      html += '<tr>';
+      for (let j = 0; j < numCols; j++) {
+        html += `<td>${data.getValue(i, j) || ''}</td>`;
+      }
+      html += '</tr>';
+    }
+    html += '</table>';
+
+    document.getElementById("sheet-content").innerHTML = html;
+  }
+
+  google.charts.load('current', { packages: ['corechart'] });
+  google.charts.setOnLoadCallback(init);
+</script>
 </body>
 </html>
