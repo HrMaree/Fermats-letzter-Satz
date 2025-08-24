@@ -155,6 +155,49 @@ img.portrait {
   margin-top: 3rem;
 }
 
+/* Allgemeine Formatierung für alle Tabellen innerhalb von #sheet-content */
+#sheet-content table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 2rem;
+}
+
+#sheet-content th,
+#sheet-content td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.8rem 1rem;
+}
+
+/* Zeilenabstand zwischen Einträgen */
+#sheet-content tr:not(:first-child) {
+  margin-bottom: 1rem;
+}
+
+/* Spaltenbreiten */
+#sheet-content td:first-child {
+  width: 30%;
+}
+
+#sheet-content td:last-child {
+  width: 70%;
+}
+
+/* Spaltenüberschriften fett + Abstand */
+#sheet-content th {
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+/* Titel (erste Zelle der Tabelle) als h2 */
+#sheet-title h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+
 /* Footer */
 footer {
   background-color: #f9f9f9;
