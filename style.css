@@ -272,9 +272,10 @@ footer a:hover {
     margin: 0.5rem 0;
   }
 
-  .nav-container {
-    justify-content: flex-start;
-  }
+ .nav-container {
+   justify-content: space-between;
+   align-items: center;
+ }
 
   .nav-home {
     position: relative;
