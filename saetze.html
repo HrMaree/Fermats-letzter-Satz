@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zeitleiste – Fermat-Projekt</title>
+  <title>Begriffe – Fermat-Projekt</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="style.css">
 
@@ -17,8 +17,8 @@
   </script>
 
   <main>
-    <h1>Mathematische Sätze</h1>
-    <p class="placeholder">Hier wird später eine Übersicht über die wichtigsten mathematischen Sätze erscheinen.</p>
+    <div id="sheet-title"></div>
+    <div id="sheet-content">Lade Inhalte...</div>
   </main>
 
   <div id="footer-placeholder"></div>
@@ -27,5 +27,12 @@
       .then(res => res.text())
       .then(html => document.getElementById("footer-placeholder").innerHTML = html);
   </script>
+
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="loadSheet.js"></script>
+<script>
+  loadSheet('math. Sätze'); // oder 'Kapitel', 'Zeitleiste' usw.
+</script>
+  
 </body>
 </html>
