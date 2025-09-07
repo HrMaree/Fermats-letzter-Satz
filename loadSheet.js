@@ -38,6 +38,10 @@ function loadSheet(tabName) {
 
     html += '</table>';
     document.getElementById("sheet-content").innerHTML = html;
+  
+    if (window.MathJax) {
+    MathJax.typesetPromise();
+  }
   }
 
   google.charts.load('current', { packages: ['corechart'] });
