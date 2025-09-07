@@ -60,20 +60,10 @@ nav svg {
   height: 24px;
   vertical-align: middle;
 }
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  position: relative;
-}
 
 .nav-home {
-  position: absolute;
-  left: 0;
+  order: 1;
+  margin-right: auto;
 }
 
 .nav-home svg {
@@ -234,7 +224,6 @@ footer a:hover {
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
-    margin-left: auto;
     padding: 0.5rem;
     font-size: 2rem;
     cursor: pointer;
