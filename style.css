@@ -227,6 +227,10 @@ footer a:hover {
   display: none;
 }
 
+.menu-icon {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .menu-icon {
     margin-left: auto;
