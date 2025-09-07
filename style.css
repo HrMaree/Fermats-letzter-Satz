@@ -233,8 +233,14 @@ footer a:hover {
     padding: 0.5rem;
     font-size: 2rem;
     cursor: pointer;
-    background: red;
+    background: none;
+    border: none;
   }
+
+  .menu-icon:hover {
+  background-color: #eee;
+  border-radius: 4px;
+}
 
   #menu-toggle {
     display: none;
