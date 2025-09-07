@@ -233,6 +233,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
   .menu-icon {
+    display: block;
     margin-left: auto;
     padding: 0.5rem;
     font-size: 2rem;
