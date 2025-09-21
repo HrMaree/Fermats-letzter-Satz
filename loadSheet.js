@@ -14,13 +14,8 @@ function loadSheet(tabName) {
     const title = data.getValue(0, 0);
     document.getElementById("sheet-title").innerHTML = `<h2>${title}</h2>`;
 
-    let html = `
-      <table>
-        <colgroup>
-          <col style="width: 30%;">
-          <col style="width: 70%;">
-        </colgroup>
-    `;
+   const tableClass = 'cols-' + numCols;
+   let html = `<table class="${tableClass}">`;
 
     html += '<tr>';
     for (let j = 0; j < numCols; j++) {
