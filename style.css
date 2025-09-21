@@ -175,15 +175,19 @@ table.cols-2 td:last-child {
 }
 
 /* Tabellenlayout für 3 Spalten */
-table.cols-3 td:nth-child(1) {
+table.cols-3 td:nth-child(1),
+table.cols-3 th:nth-child(1) {
   width: 60%;
 }
-table.cols-3 td:nth-child(2) {
+table.cols-3 td:nth-child(2),
+table.cols-3 th:nth-child(2) {
   width: 20%;
 }
-table.cols-3 td:nth-child(3) {
+table.cols-3 td:nth-child(3),
+table.cols-3 th:nth-child(3) {
   width: 20%;
 }
+
 
 /* Tabellenlayout für 4 Spalten (falls du später mehr brauchst) */
 table.cols-4 td:nth-child(1),
