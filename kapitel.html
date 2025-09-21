@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zeitleiste – Fermat-Projekt</title>
+  <title>Kapitel – Fermat-Projekt</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="loadSheet.js" defer></script>
 </head>
 <body>
   <div id="nav-placeholder"></div>
@@ -17,8 +18,8 @@
   </script>
 
   <main>
-    <h1>Kapitelübersicht</h1>
-    <p class="placeholder">Hier wird später eine Übersicht über die Kapitel des Buches erscheinen.</p>
+    <div id="sheet-title"></div>
+    <div id="sheet-content"></div>
   </main>
 
   <div id="footer-placeholder"></div>
@@ -26,6 +27,12 @@
     fetch("footer.html")
       .then(res => res.text())
       .then(html => document.getElementById("footer-placeholder").innerHTML = html);
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      loadSheet("Lesefortschritt"); // <-- Name des Tabs im Google Sheet
+    });
   </script>
 </body>
 </html>
