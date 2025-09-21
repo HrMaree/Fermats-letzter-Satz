@@ -166,14 +166,28 @@ img.portrait {
 }
 
 /* Spaltenbreiten */
-#sheet-content td:first-child {
+/* Tabellenlayout für 2 Spalten */
+table.cols-2 td:first-child {
   width: 30%;
 }
-
-#sheet-content td:last-child {
+table.cols-2 td:last-child {
   width: 70%;
 }
 
+/* Tabellenlayout für 3 Spalten */
+table.cols-3 td:nth-child(1),
+table.cols-3 td:nth-child(2),
+table.cols-3 td:nth-child(3) {
+  width: 33.33%;
+}
+
+/* Tabellenlayout für 4 Spalten (falls du später mehr brauchst) */
+table.cols-4 td:nth-child(1),
+table.cols-4 td:nth-child(2),
+table.cols-4 td:nth-child(3),
+table.cols-4 td:nth-child(4) {
+  width: 25%;
+}
 #sheet-content {
   max-width: 1000px;
   margin: 0 auto;
