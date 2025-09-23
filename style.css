@@ -310,3 +310,49 @@ footer a:hover {
   }
 }
 
+/*Block zur Gestlatung der Unterseite "Gedanken und Eindrücke" */
+.gedanken-hinweis {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  background: #eef2f7;
+  padding: 1rem;
+  border-left: 4px solid #ccc;
+  border-radius: 6px;
+}
+.gedanken-hinweis a {
+  font-weight: bold;
+  color: #0066cc;
+  text-decoration: none;
+}
+.gedanken-hinweis a:hover {
+  text-decoration: underline;
+}
+
+.gedanken-block {
+  background-color: #f9f9f9;
+  border-left: 4px solid #ccc;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.gedanken-block h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.gedanken-block p.gedanke {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.gedanken-block p.autor {
+  font-size: 0.9rem;
+  color: #777;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
