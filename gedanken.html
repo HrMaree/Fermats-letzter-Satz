@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zeitleiste – Fermat-Projekt</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gedanken und Eindrücke – Fermat-Projekt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="loadGedanken.js" defer></script>
 </head>
 <body>
   <div id="nav-placeholder"></div>
@@ -17,8 +18,13 @@
   </script>
 
   <main>
-    <h1>Gedanken und Eindrücke</h1>
-    <p class="placeholder">Hier wird später eine Dokmentation der Gedanken und Eindrücke erscheinen, die wir beim Lesen der einzelnen Kapitel hatten.</p>
+    <div class="gedanken-hinweis">
+      💬 Du möchtest auch etwas beitragen?  
+      <a href="https://forms.gle/Nz25K1w4Pb1DAVJi6" target="_blank">Hier geht’s zum Formular.</a>
+    </div>
+
+    <div id="gedanken-title"></div>
+    <div id="gedanken-content"></div>
   </main>
 
   <div id="footer-placeholder"></div>
@@ -26,6 +32,12 @@
     fetch("footer.html")
       .then(res => res.text())
       .then(html => document.getElementById("footer-placeholder").innerHTML = html);
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      loadGedankenSheet("Gedanken"); // Tabname des Sheets
+    });
   </script>
 </body>
 </html>
