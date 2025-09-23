@@ -11,9 +11,6 @@ function loadGedankenSheet(tabName) {
     const numRows = data.getNumberOfRows();
     const numCols = data.getNumberOfColumns();
 
-    const title = data.getValue(0, 0);
-    document.getElementById("gedanken-title").innerHTML = `<h2>${title}</h2>`;
-
     let html = "";
 
     console.log("Spaltenübersicht:");
