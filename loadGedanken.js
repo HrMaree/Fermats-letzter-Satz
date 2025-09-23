@@ -16,7 +16,7 @@ function loadGedankenSheet(tabName) {
 
     let html = "";
 
-    for (let i = 2; i < numRows; i++) {
+    for (let i = 1; i < numRows; i++) {
       const kapitel = data.getValue(i, 1); // Spalte B: Kapitel
       const gedanke = data.getValue(i, 2); // Spalte C: Gedanke
       const autor = numCols >= 4 ? data.getValue(i, 3) : "";
