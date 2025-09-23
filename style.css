@@ -167,11 +167,25 @@ img.portrait {
 
 /* Spaltenbreiten */
 /* Tabellenlayout für 2 Spalten */
+table.cols-2 {
+  table-layout: fixed;
+}
+
+table.cols-2 th:first-child,
 table.cols-2 td:first-child {
   width: 30%;
 }
+
+table.cols-2 th:last-child,
 table.cols-2 td:last-child {
   width: 70%;
+}
+
+table.cols-2 th,
+table.cols-2 td {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* Tabellenlayout für 3 Spalten */
